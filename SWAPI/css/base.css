@@ -1,0 +1,185 @@
+body {
+	background: #f0f0f0;
+	font-family: 'Tahoma', sans-serif;
+	counter-reset: '.main li';
+}
+
+.wrapper {
+	width: 80%;
+	margin: 30px auto;
+}
+.no{
+	display: none !important;
+}
+
+.page-header {
+	padding: 30px;
+	background: skyblue;
+	margin-bottom: 40px;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+th, td {
+	padding: 5px;
+}
+
+thead th {
+	background: #ccc;
+}
+
+code {
+	background: rgba(255,255,255,.5);
+    padding: 2px 5px;
+}
+
+tr {
+	background: #fff;
+}
+
+tr.highlight {
+	background: #fcc;
+}
+
+td.column {
+	background: #ccf;
+}
+
+table span {
+	display: none;
+}
+
+/* -------------------------------------
+
+Customização da página da Parte 1 (parte1.html)
+
+---------------------------------------- */
+
+.parte-1 .page-header {
+	color: #fff;
+	background: #006b75;
+}
+
+.parte-1 code {
+	background: rgba(0, 0, 0, .2);
+}
+
+.parte-1 h3 {
+	margin: 40px 0;
+	border-bottom: 2px solid #006b75;
+}
+
+.parte-1 .botao {
+	padding: 15px;
+	font-size: 1.2em;
+	display: inline-block;
+}
+
+.ex-2.conteudo {
+	display: inline-block;
+	background: pink;
+	padding: 15px;
+	margin: 10px 0;
+}
+
+.ex-3 {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+}
+
+.ex-3 p:nth-child(1) {
+	font-size: 1.5em;
+	padding-right: 20px;
+}
+
+.ex-3 a[data-info] {
+	border-bottom: 3px solid orange;
+}
+
+.ex-3 a[data-info]:hover {
+	cursor: pointer;
+}
+
+.ex-3 .painel-info {
+	flex: 0 0 20%;
+	background: #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* -------------------------------------
+
+Customização da página de Star Wars (sw.html)
+
+---------------------------------------- */
+body.sw {
+	background: #272b30;
+	color: #fff;
+}
+
+.sw a {
+	font-size: 0.9em;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 2px solid #FFE300;
+}
+
+.sw a:hover {
+	opacity: 0.5;
+}
+
+.sw h1 {
+	padding: 30px;
+	background: rgba(0, 0, 0, 0.3);
+	color: #FFE300;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.sw ul {
+	list-style: none;
+	padding-left: 0;
+}
+.sw ul.main > li {
+	margin: 15px 0;
+	padding: 10px;
+	background: rgba(0, 0, 0, .3);
+}
+
+.sw ul.main > li > ul {
+	font-size: 0.85em;
+	background: rgba(0, 0, 0, .3);
+	margin: 10px 0;
+}
+
+.sw ul.main > li > ul li {
+	padding: 10px;
+}
+
+/*
+Quer saber como gerei o contador dos li's?
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+*/
+
+.sw .main {
+	counter-reset: li;
+}
+
+.sw ul.main > li:before {
+	content: counter(li);
+	counter-increment: li;
+	width: 25px;
+	height: 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.9em;
+	margin-right: 10px;
+	background: rgba(0, 0, 0, .5);
+	text-align: center;
+	border-radius: 50%;
+}
